@@ -1,0 +1,46 @@
+[v-cloak] {
+    display: none;
+}
+
+body {
+    margin: 0;
+    background-color: #4f5450;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#eightBall {   
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    background-color: black;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#message {
+    color: white;
+    font-size: 200%;
+    padding: 10px;
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+input {
+    margin: 5px;
+}
+
+button {
+    margin: 10px;
+}

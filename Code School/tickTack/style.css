@@ -1,0 +1,55 @@
+#wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, auto) repeat(6, minmax(0, 175px)) minmax(0, auto);
+    grid-template-rows: minmax(0, auto);
+}
+
+#mainGrid {
+    grid-area: 1 / 2 / 2 / 8;
+}
+
+#mainGrid > div {
+    display: flex;
+    justify-content: center;
+}
+
+#mainGrid > div > div {
+    border: 2px solid black;
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+h1 {
+    grid-area: 2 / 2 / 3 / 8;
+    display: flex;
+    justify-content: center;
+}
+
+.won {
+    color: green;
+    font-size: 30px;
+    border: 4px solid lightgreen;
+    border-radius: 10px;
+    background-color: black
+}
+
+#clearBoard {
+    grid-area: 3 / 4 / 4 / 6;
+    padding: 10px;
+    border: 0px solid black;
+    border-radius: 5px;
+    background-color: lightgrey;
+    justify-content: center;
+    margin: 0;
+    display: flex;
+}
+
+#clearBoard:hover {
+    background-color: grey;
+}

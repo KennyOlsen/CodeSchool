@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tick Tack</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="mainGrid">
+            <div id="row">
+                <div class="tile row1 col1 diag1"></div>
+                <div class="tile row1 col2"></div>
+                <div class="tile row1 col3 diag2"></div>
+            </div>
+            <div id="row">
+                <div class="tile row2 col1"></div>
+                <div class="tile row2 col2 diag1 diag2"></div>
+                <div class="tile row2 col3"></div>
+            </div>
+            <div id="row">
+                <div class="tile row3 col1 diag2"></div>
+                <div class="tile row3 col2"></div>
+                <div class="tile row3 col3 diag1"></div>
+            </div>
+        </div>
+
+        <h1 id="shown">Turn: </h1>
+        <button id="clearBoard">Clear Board</button>
+    </div>
+
+    <script src="dyn.js"></script>
+</body>
+</html>

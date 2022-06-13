@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+body {
+    margin: 0;
+    background-color: rgb(242, 241, 223);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    grid-area: 2 / 2 / 3 / 8;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, auto) repeat(6, minmax(0, 175px)) minmax(0, auto);
+    grid-template-rows: minmax(0, auto);
+}
+
+header {
+    background: rgb(242, 241, 223);
+    height: 80px;
+    z-index: 99;
+    position: sticky;
+    padding-left: 8%;
+    padding-right: 8%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 9;
+    margin: 0;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+header div nav {
+    padding-left: 20%;
+    padding-right: 20%;
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+}
+
+header div nav a, header div div div {
+    color: black;
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(242, 241, 223);
+    padding: 15px 40px;
+    transition: 0.5s;
+}
+
+header div nav a:hover, header div div div:hover {
+    background-color: rgb(243, 189, 252);
+    color: rgb(242, 241, 223);
+    border-color: rgb(242, 241, 223);
+}
+
+.cta-btn {
+    max-height: 26px;
+}
+
+header img {
+    max-width: 100px;
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.actions img {
+    max-width: 25px;
+}
+
+section:nth-child(odd) {
+    background-image: linear-gradient(to right, lightblue, rgb(243, 189, 252), lightblue);
+}
+
+section:nth-child(odd):hover {
+    background-image: linear-gradient(to right, rgb(243, 189, 252), lightblue, rgb(243, 189, 252));
+}
+
+section:nth-child(even) {
+    background-image: linear-gradient(to right, rgb(243, 189, 252), lightblue, rgb(243, 189, 252));
+}
+
+section:nth-child(even):hover {
+    /*animation: backgroundIMGe;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;*/
+    background-image: linear-gradient(to right, lightblue, rgb(243, 189, 252), lightblue);
+}
+
+/*@keyframes backgroundIMGe {
+    from {
+        background-image: linear-gradient(to right, lightblue, rgb(92, 247, 206), lightblue);
+    }
+    to {
+        background-image: linear-gradient(to right, lightblue, rgb(58, 159, 132), lightblue);
+    }
+}*/
+
+section {
+    border: 10px solid rgb(242, 241, 223);
+    border-color: rgb(242, 241, 223);
+    transition: 0.5s;
+}
+
+#section1 div img {
+    border-radius: 40px;
+}
+
+#section2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: minmax(0px, 100px) auto;
+}
+
+#section2 div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#section2 div div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#section2 div div img {
+    border-radius: 40px;
+}
+
+#section3 {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: auto;
+}
+
+#section3 h2 {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+}
+
+#computerLarge {
+    background-image: url(https://cdn.pixabay.com/photo/2016/10/02/19/51/chip-1710300_1280.png);
+    height: 200px;
+    max-width: 1000px;
+    margin-bottom: 5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -50px;
+    transition: 0.3s;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#computerLarge:hover {
+    height: 220px;
+}
+
+#computerAppear {
+    opacity: 0;
+    transition-delay: 0.7s;
+    transition: 0.7s;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#computerLarge:hover ~ #computerAppear {
+    opacity: 100%;
+}
+
+#guitarLarge {
+    background-image: url(https://cdn.pixabay.com/photo/2013/07/13/12/11/guitar-159362_1280.png);
+    height: 200px;
+    max-width: 1000px;
+    margin-bottom: 5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -50px;
+    transition: 0.3s;
+    grid-column: 3 / 5;
+    grid-row: 3 / 4;
+}
+
+#guitarLarge:hover {
+    height: 240px;
+}
+
+#guitarAppear {
+    opacity: 0;
+    transition-delay: 0.7s;
+    transition: 0.7s;
+    grid-column: 5 / 6;
+    grid-row: 3 / 4;
+}
+
+#guitarLarge:hover ~ #guitarAppear {
+    opacity: 100%;
+}
+
+#controllerLarge {
+    background-image: url(https://cdn.pixabay.com/photo/2016/03/31/18/02/controller-1294077_1280.png);
+    height: 150px;
+    max-width: 1000px;
+    margin-bottom: 5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -50px;
+    transition: 0.3s;
+    grid-column: 5 / 7;
+    grid-row: 4 / 5;
+}
+
+#controllerLarge:hover {
+    height: 190px;
+}
+
+#controllerAppear {
+    opacity: 0;
+    transition-delay: 0.7s;
+    transition: 0.7s;
+    grid-column: 5 / 7;
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#controllerLarge:hover ~ #controllerAppear {
+    opacity: 100%;
+}
+
+.section-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 8% 2% 8%;
+    margin: 0;
+}
+
+img {
+    max-width: 200px;
+}
+
+.section-text {
+    width: 50%;
+}
+
+.white {
+    background-color: white;
+}
+
+h2, p {
+    text-align: center
+}
+
+ul {
+    list-style: none;
+}
+
+ul:first-child {
+    text-align: left;
+}
+
+ul:last-child {
+    text-align: right;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    grid-area: 3 / 2 / 4 / 8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
+    padding-bottom: 100px;
+    background-image: linear-gradient(grey, black);
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey black;
+}

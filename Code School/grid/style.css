@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url(https://previews.123rf.com/images/maxroje/maxroje1804/maxroje180400502/99748773-the-old-blue-wood-texture-with-natural-patterns-backgrounds-and-texture-concept-old-wooden-fence-pai.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    grid-area: 2 / 2 / 3 / 8;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, auto) repeat(6, minmax(0, 175px)) minmax(0, auto);
+    grid-template-rows: minmax(0, auto);
+}
+
+header {
+    background: lightblue;
+    height: 80px;
+    z-index: 99;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 18%);
+    position: sticky;
+    padding-left: 8%;
+    padding-right: 8%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 9;
+    grid-area: 1 / 1 / 2 / 9;
+    margin: 0;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+header div nav {
+    padding-left: 20%;
+    padding-right: 20%;
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+}
+
+header div nav a, header div div div {
+    color: black;
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: grey;
+    padding: 2px;
+}
+
+header div nav a:hover, header div div div:hover {
+    background-color: grey;
+    color: white;
+    border-color: black;
+}
+
+.cta-btn {
+    max-height: 26px;
+}
+
+header img {
+    max-width: 100px;
+    flex: 1;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.actions img {
+    max-width: 25px;
+}
+
+section:nth-child(odd) {
+    background-color: grey;
+}
+
+section:nth-child(even) {
+    background-color: white;
+}
+
+section {
+    border: 2px solid black;
+    border-width: 0 2px;
+}
+
+#section2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 8% 2% 8%;
+    margin: 0;
+}
+
+img {
+    max-width: 200px;
+}
+
+.section-text {
+    width: 50%;
+}
+
+.white {
+    background-color: white;
+}
+
+h2, p {
+    text-align: center
+}
+
+footer {
+    grid-area: 3 / 2 / 4 / 8;
+}

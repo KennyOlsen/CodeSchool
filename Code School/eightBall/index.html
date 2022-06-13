@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>8-Ball</title>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div id='eightBall'>
+            <div id='message'>{{ message }}</div>
+        </div>
+
+        {{ prompt }}
+
+        <!-- model sets input to variable 'question'. Variable stays linked (Changing the value of 'question' changes input)-->
+        <input v-model="question" v-on:keydown.enter="askQuestion()"> 
+        <button v-show="isValidQuestion()" v-on:click="askQuestion()">Ask Question</button>
+    </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

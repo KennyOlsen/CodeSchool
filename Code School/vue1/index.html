@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue1</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <div
+            v-on:click="toggleBackgroundColor(item)"
+            v-for="(item, index) in items"
+            v-bind:style="{ backgroundColor: item.color, color: globalColor }">
+            {{ item.text }} {{ index }}
+        </div>
+        
+        
+        <div v-for="(item, index) in items" v-bind:style="{ backgroundColor: item.color, color: '#444'}"> 
+            {{ item.text }} {{ index }}
+
+            <!--All still affected by same variable -->
+            <div v-if="item.show">{{ message }}</div>
+            <div v-else>Goodbye Vue!</div>
+            <div v-show="item.show">V-Show</div>
+            <button v-on:click="toggleTextandAddA(item)">Toggle Text</button>
+        
+            <br><br>
+        </div>
+            
+        <!-- Only visible if showText is true, else show Goodbye Vue -->
+        <div v-if="showText">{{ message }}</div>
+        <div v-else>Goodbye Vue!</div>
+
+        <!-- show is the same as if, but doesn't work with else -->
+        <div v-show="showText">V-Show</div>
+
+        <!-- Changes variables or runs functions based on events, works on any element -->
+        <button v-on:mouseOVer="toggleTextandAddA_GLOBAL">Toggle Text</button>
+
+        <!-- For every item in variable, a new div is created to display item -->
+        <div v-for="(item, index) in items" v-bind:style="{ backgroundColor: item.color, color: #444}"> 
+            {{ item.text }} {{ index }}
+
+            <!-- All still affected by same variable -->
+            <div v-if="item.show">{{ message }}</div>
+            <div v-else>Goodbye Vue!</div>
+            <div v-show="item.show">V-Show</div>
+            <button v-on:click="toggleTextandAddA(item)">Toggle Text</button>
+        
+            <br><br>
+        </div>
+
+        <div v-for="string in strings">
+            {{ string }}
+        </div>
+
+        <!-- repeats 10 times, starts from 1 -->
+        <div v-for="i in 10">
+            {{ i }}
+        </div>
+        </div>
+    </div> 
+
+    <!-- vue link -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
